@@ -1,9 +1,6 @@
-# CS50x - CS50’s Introduction to Computer Science
-
+# Introduction to Computer Science
 
 CS50x is Harvard University’s introduction to the intellectual enterprises of computer science and the art of programming. This course teaches you how to solve problems, both with and without code, with an emphasis on correctness, design, and style. Topics include computational thinking, abstraction, algorithms, data structures, and computer science more generally. 
-
-
 
 Assignments and projects completed for CS50x are organized into directories corresponding to the topics below:
 
