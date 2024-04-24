@@ -1,0 +1,47 @@
+// This exercise is to determine the differences between 3 sorting algorithms (selection, bubble, and merge sort)
+// Sort 1, 2, and 3 are machine code program files, so we cannot open the source code file to see what sorting algorithm is used
+// Using the text files of various lengths (randomized, reversed, or sorted numbers), we are to determine what sorting algorithm each program uses
+// We can determine and compare the running time by typing into the terminal and running the program: time ./[program] [file.txt]
+
+sort1 uses: bubble sort
+
+How do you know?:
+-Bubble sort is not super efficient and takes a while to run (compared to merge sort)
+-Performance lower bound is on the order of 'n' and upper bound is on the order of 'n^2'
+-Bubble sort is very efficient if the file is already sorted from lowest to highest (run time for sorted text is very quick < 1s)
+-Bubble sort is not efficient if the file is sorted in reverse order as it has to do the most work (run time for reversed text is very slow > 1s)
+
+Test time examples:
+random50000.txt = 5.828s
+reversed50000.txt = 4.980s
+sorted50000.txt = 0.472s
+
+
+
+sort2 uses: merge sort
+
+How do you know?:
+-Merge sort is the most efficient of the sorting algorithms
+-Performance lower and upper bound is on the order of 'nlogn'
+-All of the running times for sorting through the random, reversed, and sorted text 50000 files are < 1s (very quick)
+-Merge sort also has similar running times that is not dependent on how the values are initially sorted as it performs the same algorithm throughout
+
+Test time examples:
+random50000.txt = 0.504s
+reversed50000.txt = 0.481s
+sorted50000.txt = 0.416s
+
+
+
+sort3 uses: selection sort
+
+How do you know?:
+-Selection sort is not super efficient and takes a while to run (compared to merge sort)
+-Performance lower and upper bound is on the order of 'n^2'
+-Selection sort also has similar running times that is not dependent on how the values are initially sorted as it performs the same algorithm throughout
+    -It has to sort through the unsorted section each time using the same algorithm (slow > 1s)
+
+Test time examples:
+random50000.txt = 2.441s
+reversed50000.txt = 2.512s
+sorted50000.txt = 2.309s
