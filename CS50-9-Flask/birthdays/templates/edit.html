@@ -1,0 +1,39 @@
+<!-- Page to edit a user's birthday entry (name, birth month, birth day) -->
+
+{% extends "index.html" %}
+
+{% block body %}
+
+<div class="section">
+
+    <h1>Edit a Birthday</h1>
+    <br>
+
+    <!-- Displays the selected user's birthday information (name, birth month, birth day) -->
+    <h2>User's Birthday</h2>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Month</td>
+            <td>Day</td>
+        </tr>
+        <tr>
+            <td>{{ birthday.name }}</td>
+            <td>{{ birthday.month }}</td>
+            <td>{{ birthday.day }}</td>
+        </tr>
+    </table>
+    <br>
+
+    <h2>Edit Below</h2>
+        <!-- Form for users to edit the selected user's birthday information (name, birth month, birth day) -->
+        <form action="/makeedit" method="post">
+            <input autocomplete="off" name="editname" placeholder="Name" type="text">
+            <input autocomplete="off" name="editmonth" placeholder="Month" type="number" min="1" max="12">
+            <input autocomplete="off" name="editday" placeholder="Day" type="number" min="1" max="31">
+            <input name="editid" type="hidden" value="{{ birthday.id }}">
+            <button type="submit">Edit Birthday</button>
+        </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Quote
+{% endblock %}
+
+{% block main %}
+    <h1>Stock Quote: Check a Stock's Current Price</h1>
+    <br>
+    <br>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Stock's Symbol</th>
+                <th scope="col">Price Quote</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ symbol }}</td>
+                <td>{{ price | usd }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

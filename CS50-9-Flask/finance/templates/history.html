@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h1>Transaction History</h1>
+    <br>
+    <br>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Stock's Symbol</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price Per Share</th>
+                <th scope="col">Total Value</th>
+                <th scope="col">Date And Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in database %}
+            <tr>
+                <td>{{ row.symbol }}</td>
+                <td>{{ row.shares }}</td>
+                <td>{{ row.stock_price | usd }}</td>
+                <td>{{ (row.shares|abs * row.stock_price) | usd }}</td>
+                <td>{{ row.date_time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
