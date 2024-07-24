@@ -1,0 +1,41 @@
+<!-- The index webpage allows the user to answer a trivia quiz and it will tell them if their answers are correct -->
+<!-- This version (v2) uses JavaScript event listeners-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Trivia!</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"/>
+        <link href="styles2.css" rel="stylesheet"/>
+        <script src="script2.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 data-shadow='Trivia!'>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the approximate ratio of people to sheep in New Zealand</h3>
+                <button class="button1 incorrect">6 people per 1 sheep</button>
+                <button class="button1 incorrect">3 people per 1 sheep</button>
+                <button class="button1 incorrect">1 person per 1 sheep</button>
+                <button class="button1 incorrect">1 person per 3 sheep</button>
+                <button class="button1 correct">1 person per 6 sheep</button>
+                <p class="feedback"></p>
+            </div>
+            <br>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+                <input type="text">
+                <button class="button2 check">Check Answer</button>
+                <p class="feedback"></p>
+            </div>
+        </div>
+    </body>
+</html>
